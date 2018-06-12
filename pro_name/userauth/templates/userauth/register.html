@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body>
+<center>
+	<h1>Register Form</h1>
+	<form method="post">
+		{% csrf_token %}
+		{% for fields in form %}
+		<p>
+			{{fields.label_tag }}
+		</p>
+		<p>
+			{{fields}}
+		</p>
+		<!-- {% if fields.help_text %}
+		<p>
+			{{fields.help_text }}
+		</p>
+		{% endif %} -->
+		{% for error in fields.errors %}
+			<p style="color: red">{{error}}</p>
+		{% endfor %}
+		{% endfor %}
+		<button type="submit"> Register 
+		</button>
+	</form>
+</center>
+</body>
+</html>

@@ -19,4 +19,8 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog.urls')),
+<<<<<<< HEAD
+    url(r'^movie/',include('movies.urls')),
+=======
+>>>>>>> b31272bc5483ebba169fe0b6a9185c845ca3c6ba
 ]
